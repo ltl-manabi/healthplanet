@@ -31,8 +31,8 @@ getTokenWithoutCheck <- function(user_id, user_password){
 
 getTokenInner <- function(getCode){
   #Constants
-  client_id <- "783.0xlP3v5mis.apps.healthplanet.jp"
-  client_secret <- "1520344370214-rDXxFHn2jZxS4SYcTsCJWHFIvfX1cdzwlgtzduYY"
+  client_id <- "895.DhMKWbfFDr.apps.healthplanet.jp"
+  client_secret <- "1531629524760-V4qtfQJkB8CewShnwc56rT0f6GRRFuFEkeZNilri"
   redirect_uri <- "https://www.healthplanet.jp/success.html"
   scope <- "innerscan"
   uri <- sprintf(
