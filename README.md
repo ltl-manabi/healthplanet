@@ -1,4 +1,5 @@
 # healthplanet [![CRAN Version](http://www.r-pkg.org/badges/version/healthplanet)](http://cran.rstudio.com/web/packages/healthplanet)
+※本パッケージは[teramonagi/healthplanet](https://github.com/teramonagi/healthplanet) をほんの少し改変したものです。
 
 healthplanetパッケージは[Tanita](http://www.tanita.co.jp/)により運営・提供されている[Health Planet API](https://www.healthplanet.jp/apis/api.html)のラッパーパッケージです。
 [Health Planet API](https://www.healthplanet.jp/apis/api.html)で取得できるデータをRのdata.frame形式で返却します。
@@ -14,7 +15,7 @@ healthplanetパッケージは[Tanita](http://www.tanita.co.jp/)により運営�
 healthplanetパッケージはCRANにはありませんが、Githubより以下のコマンドでインストール可能です。
 ```R
 install.packages("devtools")
-devtools::install_github("teramonagi/healthplanet")
+devtools::install_github("ltl-manabi/healthplanet")
 ```
 
 ## 使用例

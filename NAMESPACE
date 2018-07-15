@@ -3,7 +3,7 @@
 export(getInnerScan)
 export(getToken)
 export(getTokenWithoutCheck)
-export(stakaya)
+export(ktanaka)
 import(httr)
 import(rvest)
 importFrom(dplyr,rbind_all)
