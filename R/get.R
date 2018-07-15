@@ -107,6 +107,6 @@ getInnerScan <- function(access_token, from = format(Sys.time() - 7.776e+6, form
 #' @export
 ktanaka <- function(from = format(Sys.time() - 7.776e+6, format = "%Y%m%d%H%M%S"), to = format(Sys.time(), format = "%Y%m%d%H%M%S"))
 {
-  access_token <- ""
+  access_token <- "q8ZNPDjtRKQ9itHeHCtJVXKBNjG3GHWPdNH5IGile4q8D"
   getInnerScan(access_token, from, to)
 }
