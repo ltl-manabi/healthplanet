@@ -61,7 +61,7 @@ getTokenInner <- function(getCode){
 #' @importFrom dplyr rbind_all
 #' @importFrom stringr str_replace_all
 #' @importFrom tidyr spread
-getInnerScan <- function(access_token, from="20180306140000")
+getInnerScan <- function(access_token, from, to)
 {
   #Constants
   #See the API document if you want to know the detail: https://www.healthplanet.jp/apis/api.html
@@ -80,6 +80,7 @@ getInnerScan <- function(access_token, from="20180306140000")
     access_token=access_token,
     date="1",
     from=from,
+    to=to,
     tag=tag)
 
   #Get response depending on the query
@@ -107,5 +108,5 @@ getInnerScan <- function(access_token, from="20180306140000")
 ktanaka <- function()
 {
   access_token <- "o9NSDEv7DRmFI2NkdLdPdgtrVQgi8yScL1FMHnHplgH0U"
-  getInnerScan(access_token, from = "20180306140000")
+  getInnerScan(access_token, from, to)
 }
