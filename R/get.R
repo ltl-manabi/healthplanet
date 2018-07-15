@@ -31,10 +31,10 @@ getTokenWithoutCheck <- function(user_id, user_password){
 
 getTokenInner <- function(getCode){
   #Constants
-  client_id <- "329.EcahSegA4b.apps.healthplanet.jp"
-  client_secret <- "1458478017380-cJjbCdWURa8JOyV3TNEWnEvd0qpvXRmGMtu8EW8m"
+  client_id <- "783.0xlP3v5mis.apps.healthplanet.jp"
+  client_secret <- "1520344370214-rDXxFHn2jZxS4SYcTsCJWHFIvfX1cdzwlgtzduYY"
   redirect_uri <- "https://www.healthplanet.jp/success.html"
-  scope <- "innerscan,sphygmomanometer,pedometer,smug"
+  scope <- "innerscan"
   uri <- sprintf(
     "https://www.healthplanet.jp/oauth/auth?client_id=%s&redirect_uri=%s&scope=%s&response_type=code",
     client_id, redirect_uri, scope)
@@ -58,7 +58,7 @@ getTokenInner <- function(getCode){
 #'
 #' @param access_token the token given by getToken()
 #' @export
-#' @importFrom dplyr rbind_all
+#' @importFrom dplyr bind_rows
 #' @importFrom stringr str_replace_all
 #' @importFrom tidyr spread
 getInnerScan <- function(access_token, from = format(Sys.time() - 7.776e+6, format = "%Y%m%d%H%M%S"), to = format(Sys.time(), format = "%Y%m%d%H%M%S"))
@@ -107,6 +107,6 @@ getInnerScan <- function(access_token, from = format(Sys.time() - 7.776e+6, form
 #' @export
 ktanaka <- function(from = format(Sys.time() - 7.776e+6, format = "%Y%m%d%H%M%S"), to = format(Sys.time(), format = "%Y%m%d%H%M%S"))
 {
-  access_token <- "o9NSDEv7DRmFI2NkdLdPdgtrVQgi8yScL1FMHnHplgH0U"
+  access_token <- ""
   getInnerScan(access_token, from, to)
 }
