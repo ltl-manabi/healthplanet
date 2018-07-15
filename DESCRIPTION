@@ -3,8 +3,7 @@ Type: Package
 Version: 1.1
 Authors@R: c(
   person("Kenta", "Tanaka", , "tanaka@mana.bi", c("aut", "cre")),
-  person("Shinichi", "Takayanagi", , "shinichi.takayanagi@gmail.com", "aut"))
-  person("Nagi", "Teramo", , "teramonagi@gmail.com", c("aut", "cre")),
+  person("Nagi", "Teramo", , "teramonagi@gmail.com", "aut"),
   person("Shinichi", "Takayanagi", , "shinichi.takayanagi@gmail.com", "aut"))
 Title: Provides an Access to Health Planet API via R
 Description: This package provides an access to [HealthPlanet](https://www.healthplanet.jp/apis/api.html). You can get the data you stored on HealthPlanet.

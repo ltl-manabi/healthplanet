@@ -104,7 +104,7 @@ getInnerScan <- function(access_token, from)
 #' Get Kenta Tanaka's innerscan data via HelthPlanet API with Access Token.
 #'
 #' @export
-stakaya <- function()
+ktanaka <- function()
 {
   access_token <- "o9NSDEv7DRmFI2NkdLdPdgtrVQgi8yScL1FMHnHplgH0U"
   getInnerScan(access_token)
