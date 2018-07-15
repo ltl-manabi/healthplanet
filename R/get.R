@@ -61,7 +61,7 @@ getTokenInner <- function(getCode){
 #' @importFrom dplyr rbind_all
 #' @importFrom stringr str_replace_all
 #' @importFrom tidyr spread
-getInnerScan <- function(access_token, from, to)
+getInnerScan <- function(access_token, from = format(Sys.time() - 7.884e+6, format = "%Y%m%d%H%M%S"), to = format(Sys.time(), format = "%Y%m%d%H%M%S"))
 {
   #Constants
   #See the API document if you want to know the detail: https://www.healthplanet.jp/apis/api.html
@@ -105,7 +105,7 @@ getInnerScan <- function(access_token, from, to)
 #' Get Kenta Tanaka's innerscan data via HelthPlanet API with Access Token.
 #'
 #' @export
-ktanaka <- function()
+ktanaka <- function(from = format(Sys.time() - 7.884e+6, format = "%Y%m%d%H%M%S"), to = format(Sys.time(), format = "%Y%m%d%H%M%S"))
 {
   access_token <- "o9NSDEv7DRmFI2NkdLdPdgtrVQgi8yScL1FMHnHplgH0U"
   getInnerScan(access_token, from, to)
