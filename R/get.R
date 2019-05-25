@@ -89,12 +89,12 @@ getInnerScan <- function(access_token, from = format(Sys.time() - 7.776e+6, form
   #Convert the response into data.frame format in R
   content <- content(response)
   df <- dplyr::bind_rows(content$data)
-  df$date <- strptime(df$date, "%Y%m%d%H%M")
+  df$date <- as.POSIXct(strptime(df$date, "%Y%m%d%H%M"))
   df$keydata <- as.numeric(df$keydata)
   df$tag <- stringr::str_replace_all(df$tag, table)
   cbind(
     sex=content$sex,
-    birth_date=strptime(content$birth_date, "%Y%m%d"),
+    birth_date=as.POSIXct(strptime(content$birth_date, "%Y%m%d")),
     height=as.numeric(content$height),
     tidyr::spread(df, tag, keydata))
 }
